@@ -2,12 +2,17 @@ package com.cinquepalmi.test.spring.springBootTest.entity;
 
 import java.time.LocalDateTime;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Past;
+
 public class User {
 	
 	private Long id;
 	
+	@NotEmpty
 	private String name;
 	
+	@Past
 	private LocalDateTime birthday;
 	
 	public User() {
