@@ -5,14 +5,20 @@ import java.time.LocalDateTime;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Past;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(description="All details about the user")
 public class User {
 	
 	private Long id;
 	
-	@NotEmpty
+	@ApiModelProperty(notes="Name connot be empty")
+	@NotEmpty(message="Name must not be null")
 	private String name;
 	
-	@Past
+	@ApiModelProperty(notes="Birthday should be in the past")
+	@Past(message="Birthday must be a past date")
 	private LocalDateTime birthday;
 	
 	public User() {

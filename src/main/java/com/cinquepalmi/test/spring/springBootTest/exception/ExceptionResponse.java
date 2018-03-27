@@ -2,13 +2,13 @@ package com.cinquepalmi.test.spring.springBootTest.exception;
 
 import java.time.LocalDateTime;
 
-public class ExceptionReponse {
+public class ExceptionResponse {
 	
 	private LocalDateTime timestamp;
 	private String message;
 	private String detail;
 	
-	public ExceptionReponse(LocalDateTime timestamp, String message, String detail) {
+	public ExceptionResponse(LocalDateTime timestamp, String message, String detail) {
 		super();
 		this.timestamp = timestamp;
 		this.message = message;
